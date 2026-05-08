@@ -2,6 +2,9 @@
 
 namespace Testing {
 
+    MockTape::MockTape(std::initializer_list<int32_t> data)
+            : data_(data), position_(0) {}
+
     MockTape::MockTape(std::vector<int32_t> data)
             : data_(std::move(data)), position_(0) {}
 

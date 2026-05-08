@@ -71,3 +71,6 @@ conan.lock
 conaninfo.txt
 conanbuildinfo.*
 vcpkg_installed/
+
+# Json
+config.json

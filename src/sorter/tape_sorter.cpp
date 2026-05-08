@@ -15,7 +15,7 @@ namespace Sorting {
     size_t TapeSorter::split(Tape::ITape& input) {
         size_t n = input.size(), chunk_count = 0;
         const size_t limit = config_.memoryLimitBytes() / sizeof (int32_t);
-        while (chunk_count * limit < n) {
+        while (chunk_count < (n + limit - 1) / limit) {
             size_t current_chunk_size = std::min(limit, n - chunk_count * limit);
             std::vector<int32_t> buf(current_chunk_size);
             for (size_t i = 0; i < current_chunk_size; i++) {

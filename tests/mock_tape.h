@@ -7,6 +7,7 @@ namespace Testing {
 
 class MockTape : public Tape::ITape {
     public:
+        explicit MockTape(std::initializer_list<int32_t> data);
         explicit MockTape(std::vector<int32_t> data);
         explicit MockTape(size_t count);
 

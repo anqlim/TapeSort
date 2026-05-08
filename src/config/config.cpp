@@ -3,7 +3,12 @@
 namespace Configuration {
 
     Config::Config(const std::string& configPath) {
+        applyDefaults();
         loadFromFile(configPath);
+    }
+
+    Config::Config(size_t memory_limit_bytes) : memory_limit_bytes_(memory_limit_bytes) {
+        applyDefaults();
     }
 
     const TapeDelays& Config::delays() const {

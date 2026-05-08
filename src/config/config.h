@@ -18,6 +18,7 @@ namespace Configuration {
     class Config {
     public:
         explicit Config(const std::string& configPath);
+        explicit Config(size_t memory_limit_bytes); // для тестов
         [[nodiscard]] const TapeDelays& delays() const;
         [[nodiscard]] size_t memoryLimitBytes() const;
 
